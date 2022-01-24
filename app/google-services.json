@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "428226813807",
+    "project_id": "osteoarthritis-7eb04",
+    "storage_bucket": "osteoarthritis-7eb04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428226813807:android:811c663f51a82f8bd3929a",
+        "android_client_info": {
+          "package_name": "com.example.osteoarthritisstatus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428226813807-sapmer2bgtg6r5mo180na7fahc49e911.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIvImnNEaD45jEX0t2e6pUFk-y6QTlV8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428226813807-sapmer2bgtg6r5mo180na7fahc49e911.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

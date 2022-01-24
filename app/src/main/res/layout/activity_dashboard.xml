@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/buttonkoos"
+                android:textAllCaps="false"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="240dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="181dp"
+                android:text="KOOS Scoring"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.322"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonclinicalinfo" />
+
+
+            <Button
+                android:id="@+id/buttonProfile"
+                android:textAllCaps="false"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="240dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="252dp"
+                android:layout_marginEnd="181dp"
+                android:text="Profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.322"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonSociodemographicinfo"
+                android:textAllCaps="false"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="240dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="181dp"
+                android:text="Socio-Demographic Information"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.322"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonProfile" />
+
+            <Button
+                android:id="@+id/buttonclinicalinfo"
+                android:textAllCaps="false"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="240dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="181dp"
+                android:text="Clinical Information"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.322"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonSociodemographicinfo" />
+
+            <Button
+                android:id="@+id/Logout"
+                android:textAllCaps="false"
+                android:layout_width="198dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="94dp"
+                android:layout_marginEnd="93dp"
+                android:layout_marginBottom="33dp"
+                android:text="LogOut"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonkoos" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
