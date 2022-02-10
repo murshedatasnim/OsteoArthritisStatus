@@ -35,7 +35,18 @@ public class MainActivity extends AppCompatActivity
                  Intent intent=new Intent(MainActivity.this,manageotp.class);
                  intent.putExtra("mobile",ccp.getFullNumberWithPlus().replace(" ",""));
                  startActivity(intent);
+                 finish();
              }
          });
+
+        Button btn1=findViewById(R.id.exit1);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                FirebaseAuth.getInstance().signOut();
+                finish();
+                System.exit(0);
+            }
+        });
     }
 }

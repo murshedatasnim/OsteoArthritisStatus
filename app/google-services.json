@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "428226813807-tk1s641biivu4l56hc60p244ou667583.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.osteoarthritisstatus",
+            "certificate_hash": "959727bbcb40e0b5b9db6dd71de2e6cfeefd062b"
+          }
+        },
+        {
           "client_id": "428226813807-sapmer2bgtg6r5mo180na7fahc49e911.apps.googleusercontent.com",
           "client_type": 3
         }

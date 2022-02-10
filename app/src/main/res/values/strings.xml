@@ -1,3 +1,64 @@
 <resources>
     <string name="app_name">Osteoarthritis Status</string>
+    <string-array name="genderarray">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="racearray">
+        <item>Malay</item>
+        <item>Chinese</item>
+        <item>Indian</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="q6p1array">
+        <item>prolong standing</item>
+        <item>sitting on floor</item>
+        <item>heavy weight lifting</item>
+        <item>climbing stairs</item>
+    </string-array>
+
+    <string-array name="q7array">
+        <item>Single storey</item>
+        <item> Double storey</item>
+        <item>Three storey</item>
+        <item>Multi storey</item>
+    </string-array>
+
+    <string-array name="binary_ans">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="q8array">
+        <item>Squatting pan</item>
+        <item>Sitting commode</item>
+    </string-array>
+
+    <string-array name="q9array">
+        <item>Sitting on chair</item>
+        <item>kneeling</item>
+        <item>Muslim prayer position</item>
+    </string-array>
+    
+    <string-array name="q3p1array">
+        <item>Regular</item>
+        <item>Irregular</item>
+    </string-array>
+    
+    <string-array name="q10array">
+        <item>Right </item>
+        <item>Left</item>
+        <item>Both</item>
+    </string-array>
+
+    <string-array name="q15array">
+        <item>daily</item>
+        <item>weekly</item>
+        <item>monthly</item>
+        <item>occationally</item>
+    </string-array>
+
 </resources>

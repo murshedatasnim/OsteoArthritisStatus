@@ -111,7 +111,7 @@ public class manageotp extends AppCompatActivity
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful())
                         {
-                           startActivity(new Intent(manageotp.this,dashboard.class));
+                           startActivity(new Intent(manageotp.this,profile.class));
                            finish();
 
                         } else {

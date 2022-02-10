@@ -1,105 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#003366"
     tools:context=".dashboard">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         app:cardCornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:backgroundTint="#003366">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/buttonprofile"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="Profile"
+                android:textColor="#003366"
+                android:backgroundTint="@color/white"/>
+
+
+            <Button
+                android:id="@+id/buttonClinical"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="Clinical Information"
+                android:textColor="#003366"
+                android:backgroundTint="@color/white" />
+
+            <Button
+                android:id="@+id/buttonsocio"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="Socio-Demographic Information"
+                android:textColor="#003366"
+                android:backgroundTint="@color/white"/>
 
             <Button
                 android:id="@+id/buttonkoos"
                 android:textAllCaps="false"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="240dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="126dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="181dp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
                 android:text="KOOS Scoring"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.322"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonclinicalinfo" />
-
+                android:textColor="#003366"
+                android:backgroundTint="@color/white"/>
 
             <Button
-                android:id="@+id/buttonProfile"
+                android:id="@+id/exit"
                 android:textAllCaps="false"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="240dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="126dp"
-                android:layout_marginTop="252dp"
-                android:layout_marginEnd="181dp"
-                android:text="Profile"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.322"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/buttonSociodemographicinfo"
-                android:textAllCaps="false"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="240dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="126dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="181dp"
-                android:text="Socio-Demographic Information"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.322"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonProfile" />
-
-            <Button
-                android:id="@+id/buttonclinicalinfo"
-                android:textAllCaps="false"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="240dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="126dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="181dp"
-                android:text="Clinical Information"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.322"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonSociodemographicinfo" />
-
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="Exit"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"/>
             <Button
                 android:id="@+id/Logout"
                 android:textAllCaps="false"
-                android:layout_width="198dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="104dp"
-                android:layout_marginTop="94dp"
-                android:layout_marginEnd="93dp"
-                android:layout_marginBottom="33dp"
-                android:text="LogOut"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonkoos" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_20sdp"
+                android:textSize="@dimen/_15sdp"
+                android:text="Logout"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/black"/>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

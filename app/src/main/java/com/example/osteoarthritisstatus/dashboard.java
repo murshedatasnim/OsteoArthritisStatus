@@ -11,20 +11,38 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class dashboard extends AppCompatActivity
 {
-  Button btn;
+  Button btn,btn1;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        Button profileButton = findViewById(R.id.buttonProfile);
+        Button profileButton = findViewById(R.id.buttonprofile);
+        Button socioinfoButton = findViewById(R.id.buttonsocio);
+        Button clinicalinfoButton = findViewById(R.id.buttonClinical);
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),profile.class));
-//                finish();
+                finish();
+            }
+        });
+
+        socioinfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),sociodemographyinfo.class));
+                finish();
+            }
+        });
+
+        clinicalinfoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),clinicalinfo.class));
+                finish();
             }
         });
 
@@ -33,7 +51,18 @@ public class dashboard extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
                 finish();
+            }
+        });
+
+        btn1=(Button)findViewById(R.id.exit);
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                FirebaseAuth.getInstance().signOut();
+                finish();
+                System.exit(0);
             }
         });
     }
