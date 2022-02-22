@@ -21,6 +21,7 @@ public class dashboard extends AppCompatActivity
         Button profileButton = findViewById(R.id.buttonprofile);
         Button socioinfoButton = findViewById(R.id.buttonsocio);
         Button clinicalinfoButton = findViewById(R.id.buttonClinical);
+        Button koos = findViewById(R.id.buttonkoos);
 
         profileButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,14 @@ public class dashboard extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),clinicalinfo.class));
+                finish();
+            }
+        });
+
+        koos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),koosScoring.class));
                 finish();
             }
         });

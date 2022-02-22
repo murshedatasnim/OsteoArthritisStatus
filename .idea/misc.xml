@@ -3,12 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_clinicalinfo.xml" value="0.33" />
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_clinicalinfo.xml" value="0.25" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_koos_scoring.xml" value="0.10700091715071844" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_manageotp.xml" value="0.25" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_profile.xml" value="0.25" />
-        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_sociodemographyinfo.xml" value="0.1" />
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_sociodemographyinfo.xml" value="0.25" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_splash_screen.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/dropdown_item.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />

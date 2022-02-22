@@ -39,100 +39,102 @@ public class sociodemographyinfo extends AppCompatActivity {
 
 
 
-        //-------q6p1------------//
-        MaterialAutoCompleteTextView q6p1 = (MaterialAutoCompleteTextView) findViewById(R.id.q6p1);
+        //-------s1------------//
+        MaterialAutoCompleteTextView s1 = (MaterialAutoCompleteTextView) findViewById(R.id.s1);
 
         // Create an ArrayAdapter using the string array and a default spinner
-        ArrayAdapter<CharSequence> q6p1Adapter = ArrayAdapter
-                .createFromResource(this, R.array.q6p1array,
+        ArrayAdapter<CharSequence> s1Adapter = ArrayAdapter
+                .createFromResource(this, R.array.s1array,
                         android.R.layout.simple_spinner_dropdown_item);
 
         // Specify the layout to use when the list of choices appears
-        q6p1Adapter
+        s1Adapter
                 .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Apply the adapter to the spinner
-        q6p1.setAdapter(q6p1Adapter);
+        s1.setAdapter(s1Adapter);
 
 
-        //-------q6p2------------//
-        MaterialAutoCompleteTextView q6p2 = (MaterialAutoCompleteTextView) findViewById(R.id.q6p2);
+        //-------s2------------//
+        MaterialAutoCompleteTextView s2 = (MaterialAutoCompleteTextView) findViewById(R.id.s2);
 
         // Create an ArrayAdapter using the string array and a default spinner
-        ArrayAdapter<CharSequence> q6p2Adapter = ArrayAdapter
+        ArrayAdapter<CharSequence> s2Adapter = ArrayAdapter
+                .createFromResource(this, R.array.s2array,
+                        android.R.layout.simple_spinner_dropdown_item);
+
+        // Specify the layout to use when the list of choices appears
+        s2Adapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        s2.setAdapter(s2Adapter);
+
+
+        //-------s3------------//
+        MaterialAutoCompleteTextView s3 = (MaterialAutoCompleteTextView) findViewById(R.id.s3);
+
+        // Create an ArrayAdapter using the string array and a default spinner
+        ArrayAdapter<CharSequence> s3Adapter = ArrayAdapter
+                .createFromResource(this, R.array.s3array,
+                        android.R.layout.simple_spinner_dropdown_item);
+
+        // Specify the layout to use when the list of choices appears
+        s3Adapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        s3.setAdapter(s3Adapter);
+
+
+        //-------s4------------//
+
+        //--------s5----------//
+        MaterialAutoCompleteTextView s5 = (MaterialAutoCompleteTextView) findViewById(R.id.s5);
+
+        // Create an ArrayAdapter using the string array and a default spinner
+        ArrayAdapter<CharSequence> s5Adapter = ArrayAdapter
                 .createFromResource(this, R.array.binary_ans,
                         android.R.layout.simple_spinner_dropdown_item);
 
         // Specify the layout to use when the list of choices appears
-        q6p2Adapter
+        s5Adapter
                 .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Apply the adapter to the spinner
-        q6p2.setAdapter(q6p2Adapter);
+        s5.setAdapter(s5Adapter);
 
 
-        //-------q7p1------------//
-        MaterialAutoCompleteTextView q7p1 = (MaterialAutoCompleteTextView) findViewById(R.id.q7p1);
+        //-------s6------------//
+        MaterialAutoCompleteTextView s6 = (MaterialAutoCompleteTextView) findViewById(R.id.s6);
 
         // Create an ArrayAdapter using the string array and a default spinner
-        ArrayAdapter<CharSequence> q7p1Adapter = ArrayAdapter
-                .createFromResource(this, R.array.q7array,
+        ArrayAdapter<CharSequence> s6Adapter = ArrayAdapter
+                .createFromResource(this, R.array.s6array,
                         android.R.layout.simple_spinner_dropdown_item);
 
         // Specify the layout to use when the list of choices appears
-        q7p1Adapter
+        s6Adapter
                 .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Apply the adapter to the spinner
-        q7p1.setAdapter(q7p1Adapter);
+        s6.setAdapter(s6Adapter);
 
 
-        //-------q8------------//
-        MaterialAutoCompleteTextView q8 = (MaterialAutoCompleteTextView) findViewById(R.id.q8);
+        //-------s7------------//
+        MaterialAutoCompleteTextView s7 = (MaterialAutoCompleteTextView) findViewById(R.id.s7);
 
         // Create an ArrayAdapter using the string array and a default spinner
-        ArrayAdapter<CharSequence> q8Adapter = ArrayAdapter
-                .createFromResource(this, R.array.q8array,
+        ArrayAdapter<CharSequence> s7Adapter = ArrayAdapter
+                .createFromResource(this, R.array.s7array,
                         android.R.layout.simple_spinner_dropdown_item);
 
         // Specify the layout to use when the list of choices appears
-        q8Adapter
+        s7Adapter
                 .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // Apply the adapter to the spinner
-        q8.setAdapter(q8Adapter);
-
-
-        //-------q9------------//
-        MaterialAutoCompleteTextView q9 = (MaterialAutoCompleteTextView) findViewById(R.id.q9);
-
-        // Create an ArrayAdapter using the string array and a default spinner
-        ArrayAdapter<CharSequence> q9Adapter = ArrayAdapter
-                .createFromResource(this, R.array.q9array,
-                        android.R.layout.simple_spinner_dropdown_item);
-
-        // Specify the layout to use when the list of choices appears
-        q9Adapter
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // Apply the adapter to the spinner
-        q9.setAdapter(q9Adapter);
-
-
-        //-------q16p1------------//
-        MaterialAutoCompleteTextView q16p1 = (MaterialAutoCompleteTextView) findViewById(R.id.q16p1);
-
-        // Create an ArrayAdapter using the string array and a default spinner
-        ArrayAdapter<CharSequence> q16p1Adapter = ArrayAdapter
-                .createFromResource(this, R.array.binary_ans,
-                        android.R.layout.simple_spinner_dropdown_item);
-
-        // Specify the layout to use when the list of choices appears
-        q16p1Adapter
-                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // Apply the adapter to the spinner
-        q16p1.setAdapter(q16p1Adapter);
+        s7.setAdapter(s7Adapter);
 
 
     }

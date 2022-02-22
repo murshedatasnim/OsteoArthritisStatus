@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#003366"
+    android:background="#185088"
     tools:context=".dashboard">
 
     <androidx.cardview.widget.CardView
@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         app:cardCornerRadius="5dp"
-        android:backgroundTint="#003366">
+        android:backgroundTint="#185088">
 
         <LinearLayout
             android:layout_width="match_parent"

@@ -45,7 +45,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -56,76 +55,65 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Menstrual history(for female) -"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="bold" />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:hint="--select one--">
-
-                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q3p1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:inputType="none" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-                </LinearLayout>
-
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_15sdp"
-                        android:text="Menopause year (for female)"
+                        android:text="Height"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/q3p2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_20sdp"
-                        android:layout_marginEnd="@dimen/_20sdp"
-                        android:hint="Ans" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="@dimen/_15sdp"
-                        android:text="Waist circumference in inch"
-                        android:textSize="@dimen/_15sdp"
-                        android:textStyle="bold" />
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/q4p2"
+                        android:id="@+id/c1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
-                        android:hint="Ans" />
+                        android:hint="in meter" />
                 </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="Weight"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/c2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:hint="in kg" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="Waist circumference"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/c3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:hint="in Inches" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -137,7 +125,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Which is the involved knee?"
+                        android:text="Do you have knee pain? "
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -150,7 +138,7 @@
                         android:hint="--select one--">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q10"
+                            android:id="@+id/c4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
@@ -158,6 +146,36 @@
                     </com.google.android.material.textfield.TextInputLayout>
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="Which knee is affected? "
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:hint="--select one--">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/c5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -174,35 +192,35 @@
                         android:textStyle="bold" />
 
                     <CheckBox
-                        android:id="@+id/q11pain"
+                        android:id="@+id/c6pain"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Pain" />
                     <CheckBox
-                        android:id="@+id/q11swelling"
+                        android:id="@+id/c6swelling"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Swelling" />
                     <CheckBox
-                        android:id="@+id/q11Deformity"
+                        android:id="@+id/c6Deformity"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Deformity" />
                     <CheckBox
-                        android:id="@+id/q11stiffness"
+                        android:id="@+id/c6stiffness"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Stiffness" />
                     <CheckBox
-                        android:id="@+id/q11movementrestriction"
+                        android:id="@+id/c6movementrestriction"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -210,7 +228,7 @@
                         android:text="Movement Restriction" />
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/q11other"
+                        android:id="@+id/c6other"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -219,6 +237,7 @@
 
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -243,7 +262,7 @@
                         android:hint="--select one--">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q12p1"
+                            android:id="@+id/c7"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
@@ -252,6 +271,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/c7p2"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_5sdp"
@@ -266,7 +287,7 @@
                         android:textStyle="bold" />
 
                     <CheckBox
-                        android:id="@+id/q12hip"
+                        android:id="@+id/c7hip"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -274,7 +295,7 @@
                         android:text="Hip" />
 
                     <CheckBox
-                        android:id="@+id/q12ankle"
+                        android:id="@+id/c7ankle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -282,7 +303,7 @@
                         android:text="Ankle" />
 
                     <CheckBox
-                        android:id="@+id/q12smalljointsoffinger"
+                        android:id="@+id/c7smalljointsoffinger"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -290,14 +311,14 @@
                         android:text="Small joints of finger" />
 
                     <CheckBox
-                        android:id="@+id/q12baseofthumbjoint"
+                        android:id="@+id/c7baseofthumbjoint"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Base of the thumb joints" />
                     <CheckBox
-                        android:id="@+id/q12neckpain"
+                        android:id="@+id/c7neckpain"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -305,7 +326,7 @@
                         android:text="Neck pain" />
 
                     <CheckBox
-                        android:id="@+id/q12backpain"
+                        android:id="@+id/c7backpain"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -313,7 +334,8 @@
                         android:text="back pain" />
                 </LinearLayout>
 
-                 <LinearLayout
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_5sdp"
@@ -327,94 +349,124 @@
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
-                    <CheckBox
-                        android:id="@+id/q13no"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
-                        android:text="No" />
-                     <CheckBox
-                         android:id="@+id/q13Dyslipidaemia"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Dyslipidaemia" />
+                        android:hint="--select one--">
 
-                     <CheckBox
-                         android:id="@+id/q13Cardiacdisease"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Cardiac disease " />
-                     <CheckBox
-                         android:id="@+id/q13Hypertension"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Hypertension" />
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/c8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
 
-                     <CheckBox
-                         android:id="@+id/q13DiabetesMellitus"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Diabetes Mellitus" />
-                     <CheckBox
-                         android:id="@+id/q13cancer"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Cancer" />
-                     <CheckBox
-                         android:id="@+id/q13asthma"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Asthma" />
-                     <CheckBox
-                         android:id="@+id/q13chronickidney"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Chronic kidney disease" />
-                     <CheckBox
-                         android:id="@+id/q13chronicmusculoskeletal"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Chronic musculoskeletal disorder" />
-                     <CheckBox
-                         android:id="@+id/q13gout"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Gout" />
-                     <CheckBox
-                         android:id="@+id/q13RheumatoidArthritis"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:text="Rheumatoid Arthritis" />
-                     <com.google.android.material.textfield.TextInputEditText
-                         android:id="@+id/q13other"
-                         android:layout_width="match_parent"
-                         android:layout_height="wrap_content"
-                         android:layout_marginStart="@dimen/_20sdp"
-                         android:layout_marginEnd="@dimen/_20sdp"
-                         android:hint="Other" />
-                 </LinearLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
 
+
+                <LinearLayout
+                    android:id="@+id/c8p2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="Please tick the right ones"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/c8Dyslipidaemia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Dyslipidaemia" />
+
+                    <CheckBox
+                        android:id="@+id/c8Cardiacdisease"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Cardiac disease " />
+                    <CheckBox
+                        android:id="@+id/c8Hypertension"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Hypertension" />
+
+                    <CheckBox
+                        android:id="@+id/c8DiabetesMellitus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Diabetes Mellitus" />
+                    <CheckBox
+                        android:id="@+id/q13cancer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Cancer" />
+                    <CheckBox
+                        android:id="@+id/c8asthma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Asthma" />
+                    <CheckBox
+                        android:id="@+id/c8chronickidney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Chronic kidney disease" />
+                    <CheckBox
+                        android:id="@+id/c8chronicmusculoskeletal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Chronic musculoskeletal disorder" />
+                    <CheckBox
+                        android:id="@+id/c8gout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Gout" />
+                    <CheckBox
+                        android:id="@+id/c8RheumatoidArthritis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:text="Rheumatoid Arthritis" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/c8other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:hint="Other" />
+                </LinearLayout>
+
+
+
+<!--                                 old                     -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -425,7 +477,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Smoking history?"
+                        android:text="Menstrual history(for female) -"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -438,14 +490,15 @@
                         android:hint="--select one--">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q14p1"
+                            android:id="@+id/c9"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
 
                     </com.google.android.material.textfield.TextInputLayout>
-
                 </LinearLayout>
+
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -457,12 +510,46 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="If Yes, How many sticks per day?"
+                        android:text="Smoking history:"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:hint="--select one--">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/c10p1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/c10p21"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="How many sticks per day?"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/q14p2"
+                        android:id="@+id/c10p2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
@@ -480,7 +567,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="History of drinking alcohol?"
+                        android:text="History of alcohol intake: "
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -493,7 +580,7 @@
                         android:hint="--select one--">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q15p1"
+                            android:id="@+id/c11p1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
@@ -503,6 +590,8 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/c11p21"
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_5sdp"
@@ -525,7 +614,7 @@
                         android:hint="--select one--">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q15p2"
+                            android:id="@+id/c11p2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
@@ -533,6 +622,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -544,7 +634,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Do you have any H/O recent trauma (eg sport injuries, accident and etc.)?"
+                        android:text="History of sports activity: "
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -557,7 +647,7 @@
                         android:hint="--select one--">
 
                         <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                            android:id="@+id/q17p1"
+                            android:id="@+id/c12"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="none" />
@@ -576,25 +666,36 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="If Yes, mention the affected side"
+                        android:text="History of recent injury to knee:"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/q17p2"
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
-                        android:hint="Ans" />
+                        android:hint="--select one--">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/c13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                 </LinearLayout>
+
+
 
                 <Button
                     android:id="@+id/saveclinical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_40sdp"
                     android:layout_marginBottom="@dimen/_20sdp"
                     android:backgroundTint="@color/teal_700"
                     android:text="Submit"

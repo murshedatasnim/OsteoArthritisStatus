@@ -13,14 +13,15 @@
         <item>Other</item>
     </string-array>
 
-    <string-array name="q6p1array">
+    <string-array name="s2array">
         <item>prolong standing</item>
         <item>sitting on floor</item>
         <item>heavy weight lifting</item>
         <item>climbing stairs</item>
+        <item>None</item>
     </string-array>
 
-    <string-array name="q7array">
+    <string-array name="s3array">
         <item>Single storey</item>
         <item> Double storey</item>
         <item>Three storey</item>
@@ -32,33 +33,51 @@
         <item>No</item>
     </string-array>
 
-    <string-array name="q8array">
+    <string-array name="s6array">
         <item>Squatting pan</item>
         <item>Sitting commode</item>
     </string-array>
 
-    <string-array name="q9array">
-        <item>Sitting on chair</item>
+    <string-array name="s7array">
+        <item>Sitting on floor</item>
         <item>kneeling</item>
         <item>Muslim prayer position</item>
     </string-array>
     
-    <string-array name="q3p1array">
-        <item>Regular</item>
-        <item>Irregular</item>
+    <string-array name="c9array">
+        <item>Regular menstruation</item>
+        <item>Irregular menstruation</item>
+        <item>Menstruation stopped</item>
     </string-array>
     
-    <string-array name="q10array">
+    <string-array name="c5array">
         <item>Right </item>
         <item>Left</item>
         <item>Both</item>
     </string-array>
 
-    <string-array name="q15array">
+    <string-array name="c11p2array">
         <item>daily</item>
         <item>weekly</item>
         <item>monthly</item>
         <item>occationally</item>
+    </string-array>
+
+    <string-array name="c12array">
+        <item>Professional player</item>
+        <item>regular sports activity</item>
+        <item>occasional sports activity</item>
+        <item>not applicable</item>
+    </string-array>
+
+    <string-array name="s1array">
+        <item>Health care worker – doctor, nurse, therapist</item>
+        <item>Teacher/engineer/lawyer</item>
+        <item>Armed force personnel/police/security personnel</item>
+        <item>Manager/Office clerk</item>
+        <item>janitor/Day labourer</item>
+        <item>Retired</item>
+        <item>Others</item>
     </string-array>
 
 </resources>
