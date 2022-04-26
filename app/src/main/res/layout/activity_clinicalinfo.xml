@@ -125,7 +125,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Do you have knee pain? "
+                        android:text="Do you currently have knee pain?"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -187,7 +187,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="What are the current symptoms of the involved knee?"
+                        android:text="What are the symptoms of the affected knee? (Select all that apply)"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -282,7 +282,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text=" If yes, please tick -"
+                        android:text=" If yes, please tick all that apply"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -379,7 +379,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Please tick the right ones"
+                        android:text="If yes, please tick all that apply"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -435,12 +435,12 @@
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Chronic kidney disease" />
                     <CheckBox
-                        android:id="@+id/c8chronicmusculoskeletal"
+                        android:id="@+id/c8RheumatoidArthritis"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
-                        android:text="Chronic musculoskeletal disorder" />
+                        android:text="Rheumatoid Arthritis" />
                     <CheckBox
                         android:id="@+id/c8gout"
                         android:layout_width="match_parent"
@@ -449,12 +449,14 @@
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Gout" />
                     <CheckBox
-                        android:id="@+id/c8RheumatoidArthritis"
+                        android:id="@+id/c8chronicmusculoskeletal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
-                        android:text="Rheumatoid Arthritis" />
+                        android:text="Other chronic musculoskeletal disorder" />
+
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/c8other"
                         android:layout_width="match_parent"
@@ -477,7 +479,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Menstrual history(for female) -"
+                        android:text="Menstrual history (for female) -"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -510,7 +512,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Smoking history:"
+                        android:text="Smoking :"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -544,7 +546,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="How many sticks per day?"
+                        android:text="If yes, how many cigarettes per day?"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -567,7 +569,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="History of alcohol intake: "
+                        android:text="Alcohol intake: "
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -634,7 +636,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="History of sports activity: "
+                        android:text="Sports activity: "
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -666,7 +668,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="History of recent injury to knee:"
+                        android:text="Recent injury to knee:"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 
@@ -688,6 +690,40 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:id="@+id/c13p2"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/_15sdp"
+                        android:text="If yes, select one"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:hint="--select one--">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/c13p21"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
 
 
                 <Button

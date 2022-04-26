@@ -9,13 +9,19 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+import com.google.android.material.textfield.TextInputEditText;
 
 public class clinicalinfo extends AppCompatActivity {
+    TextInputEditText c1, c2, c3, other_c6;
+    MaterialAutoCompleteTextView c4, c5, c7;
+//
+//
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,25 +37,19 @@ public class clinicalinfo extends AppCompatActivity {
             }
         });
 
-        Button submit = findViewById(R.id.saveclinical);
-
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),dashboard.class));
-                finish();
-            }
-        });
 
         //---------------c1--------------//
+        c1 = findViewById(R.id.c1);
 
         //---------------c2-------------//
+        c2 = findViewById(R.id.c2);
 
         //---------------c3--------------//
+        c3 = findViewById(R.id.c3);
 
 
         //-------c4------------//
-        MaterialAutoCompleteTextView c4 = (MaterialAutoCompleteTextView) findViewById(R.id.c4);
+        c4 = (MaterialAutoCompleteTextView) findViewById(R.id.c4);
 
         // Create an ArrayAdapter using the string array and a default spinner
         ArrayAdapter<CharSequence> c4Adapter = ArrayAdapter
@@ -64,7 +64,7 @@ public class clinicalinfo extends AppCompatActivity {
         c4.setAdapter(c4Adapter);
 
         //-------c5------------//
-        MaterialAutoCompleteTextView c5 = (MaterialAutoCompleteTextView) findViewById(R.id.c5);
+        c5 = (MaterialAutoCompleteTextView) findViewById(R.id.c5);
 
         // Create an ArrayAdapter using the string array and a default spinner
         ArrayAdapter<CharSequence> c5Adapter = ArrayAdapter
@@ -80,6 +80,14 @@ public class clinicalinfo extends AppCompatActivity {
 
 
         //--------c6---------//
+        CheckBox pain,swelling,deformity,stiffness,movement;
+        pain = findViewById(R.id.c6pain);
+        swelling = findViewById(R.id.c6swelling);
+        deformity = findViewById(R.id.c6Deformity);
+        stiffness = findViewById(R.id.c6stiffness);
+        movement = findViewById(R.id.c6movementrestriction);
+        other_c6 = findViewById(R.id.c6other);
+
 
         //-------c7------------//
         MaterialAutoCompleteTextView c7 = (MaterialAutoCompleteTextView) findViewById(R.id.c7);
@@ -113,6 +121,14 @@ public class clinicalinfo extends AppCompatActivity {
                 }
             }
         });
+
+        CheckBox hip, ankle, smallJointOfFinger, baseOfThumbJoint, neckPain, backPain;
+        hip = findViewById(R.id.c7hip);
+        ankle = findViewById(R.id.c7ankle);
+        smallJointOfFinger = findViewById(R.id.c7smalljointsoffinger);
+        baseOfThumbJoint = findViewById(R.id.c7baseofthumbjoint);
+        neckPain = findViewById(R.id.c7neckpain);
+        backPain = findViewById(R.id.c7backpain);
 
 
         //-------c8------------//
@@ -272,5 +288,82 @@ public class clinicalinfo extends AppCompatActivity {
 
         // Apply the adapter to the spinner
         c13.setAdapter(c13Adapter);
+
+        c13.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
+                String selection = (String)parent.getItemAtPosition(position);
+                //TODO Do something with the selected text
+
+                if (selection.equals("Yes")){
+//                    Toast.makeText(parent.getContext(), "You selected: " + selection,
+//                            Toast.LENGTH_LONG).show();
+                    LinearLayout linearLayout = findViewById(R.id.c13p2);
+                    linearLayout.setVisibility(View.VISIBLE);
+                }else if (selection.equals("No")){
+                    LinearLayout linearLayout = findViewById(R.id.c13p2);
+                    linearLayout.setVisibility(View.GONE);
+                }
+            }
+        });
+
+        //           c13p2                    //
+
+        MaterialAutoCompleteTextView c13p21 = (MaterialAutoCompleteTextView) findViewById(R.id.c13p21);
+
+        // Create an ArrayAdapter using the string array and a default spinner
+        ArrayAdapter<CharSequence> c13p21Adapter = ArrayAdapter
+                .createFromResource(this, R.array.c13p2array,
+                        android.R.layout.simple_spinner_dropdown_item);
+
+        // Specify the layout to use when the list of choices appears
+        c13p21Adapter
+                .setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Apply the adapter to the spinner
+        c13p21.setAdapter(c13p21Adapter);
+
+
+
+        Button submit = findViewById(R.id.saveclinical);
+
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                startActivity(new Intent(getApplicationContext(),dashboard.class));
+                finish();
+            }
+        });
+
+
+
+
+
+
+
+    }
+
+
+
+    private boolean CheckAllFields() {
+        if (c1.length() == 0) {
+            c1.setError("This field is required");
+            return false;
+        }
+
+        if (c2.length() == 0) {
+            c2.setError("This field is required");
+            return false;
+        }
+
+        if (c3.length() == 0) {
+            c3.setError("This field is required");
+            return false;
+        }
+
+
+        // after all validation return true.
+        return true;
     }
 }

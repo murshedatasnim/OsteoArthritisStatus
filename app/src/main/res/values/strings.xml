@@ -14,10 +14,10 @@
     </string-array>
 
     <string-array name="s2array">
-        <item>prolong standing</item>
-        <item>sitting on floor</item>
-        <item>heavy weight lifting</item>
-        <item>climbing stairs</item>
+        <item>Prolong standing</item>
+        <item>Sitting on floor</item>
+        <item>Heavy weight lifting</item>
+        <item>Climbing stairs</item>
         <item>None</item>
     </string-array>
 
@@ -40,7 +40,7 @@
 
     <string-array name="s7array">
         <item>Sitting on floor</item>
-        <item>kneeling</item>
+        <item>Kneeling</item>
         <item>Muslim prayer position</item>
     </string-array>
     
@@ -57,27 +57,34 @@
     </string-array>
 
     <string-array name="c11p2array">
-        <item>daily</item>
-        <item>weekly</item>
-        <item>monthly</item>
-        <item>occationally</item>
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Occasionally</item>
     </string-array>
 
     <string-array name="c12array">
         <item>Professional player</item>
-        <item>regular sports activity</item>
-        <item>occasional sports activity</item>
-        <item>not applicable</item>
+        <item>Regular sports activity</item>
+        <item>Occasional sports activity</item>
+        <item>Not applicable</item>
     </string-array>
 
     <string-array name="s1array">
-        <item>Health care worker – doctor, nurse, therapist</item>
+        <item>Health care worker – doctor, nurse, therapist, lab technologist</item>
         <item>Teacher/engineer/lawyer</item>
-        <item>Armed force personnel/police/security personnel</item>
+        <item>Armed force personnel/Police/Security personnel</item>
         <item>Manager/Office clerk</item>
-        <item>janitor/Day labourer</item>
+        <item>Janitor/Day labourer</item>
         <item>Retired</item>
         <item>Others</item>
+    </string-array>
+
+    <string-array name="c13p2array">
+        <item>Sports injury</item>
+        <item>Motor vehicle accident</item>
+        <item>Fall</item>
+        <item>Other</item>
     </string-array>
 
 </resources>

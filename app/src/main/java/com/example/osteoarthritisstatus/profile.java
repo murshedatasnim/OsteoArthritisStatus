@@ -1,10 +1,13 @@
 package com.example.osteoarthritisstatus;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -13,19 +16,41 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.MaterialAutoCompleteTextView;
+import com.google.firebase.FirebaseException;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthOptions;
+import com.google.firebase.auth.PhoneAuthProvider;
+import com.hbb20.CountryCodePicker;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class profile extends AppCompatActivity {
 
 //    final Calendar myCalendar= Calendar.getInstance();
-    EditText editText;
+    private CountryCodePicker ccp;
+    private TextView current_phone;
+//    EditText editText;
+    private AlertDialog.Builder dialogbuilder;
+    private AlertDialog dialog;
+    private EditText newphone;
+    private Button savephone, cancelupdate;
+    private EditText otp;
+    private Button otpUpdate;
+    private Button otpCancel;
+//    String phonenumber;
+    private String otpid;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -53,9 +78,18 @@ public class profile extends AppCompatActivity {
         });
 
 
-        TextView phone = findViewById(R.id.phone);
+        current_phone = findViewById(R.id.phone);
         String userphone = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
-        phone.setText(userphone);
+        current_phone.setText(userphone);
+
+        Button update = findViewById(R.id.updatephone);
+
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                updatePhone();
+            }
+        });
 
 
         //----gender--------
@@ -126,4 +160,160 @@ public class profile extends AppCompatActivity {
 //            }
 //        });
 //    }
+
+
+    public void updatePhone(){
+        dialogbuilder = new AlertDialog.Builder(this);
+        final View update_phone_view = getLayoutInflater().inflate(R.layout.popup, null);
+
+
+
+        savephone = update_phone_view.findViewById(R.id.dophoneupdatebutton);
+        cancelupdate = update_phone_view.findViewById(R.id.cancelphoneupdatebutton);
+        dialogbuilder.setView(update_phone_view);
+        dialog = dialogbuilder.create();
+        dialog.show();
+
+        savephone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newphone = update_phone_view.findViewById(R.id.updatedphone);
+                ccp=update_phone_view.findViewById(R.id.ccp);
+                ccp.registerCarrierNumberEditText(newphone);
+                String newPhoneno = ccp.getFullNumberWithPlus().replace(" ","");
+//                Log.d("phone", newPhoneno);
+//                FirebaseAuth.getInstance().getCurrentUser().updatePhoneNumber(newPhone);
+                dialog.dismiss();
+                confirmUpdate(newPhoneno);
+
+
+            }
+        });
+
+        cancelupdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
+    public void confirmUpdate(String phone){
+
+        dialogbuilder = new AlertDialog.Builder(this);
+        final View update_phone_view = getLayoutInflater().inflate(R.layout.otp_popup, null);
+
+        otp = update_phone_view.findViewById(R.id.otp);
+        otpUpdate = update_phone_view.findViewById(R.id.otpConfirm);
+        otpCancel = update_phone_view.findViewById(R.id.otpCancel);
+        dialogbuilder.setView(update_phone_view);
+        dialog = dialogbuilder.create();
+        dialog.show();
+
+        mAuth=FirebaseAuth.getInstance();
+
+        initiateotp(phone);
+
+        otpUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(otp.getText().toString().isEmpty())
+                    Toast.makeText(getApplicationContext(),"Blank Field can not be processed",Toast.LENGTH_LONG).show();
+                else if(otp.getText().toString().length()!=6)
+                    Toast.makeText(getApplicationContext(),"Invalid OTP",Toast.LENGTH_LONG).show();
+                else
+                {
+                    PhoneAuthCredential phoneAuthCredential = PhoneAuthProvider.getCredential( phone, otpid );
+                    FirebaseAuth.getInstance().getCurrentUser().updatePhoneNumber(phoneAuthCredential)
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                       @Override
+                                                       public void onComplete(@NonNull Task<Void> task) {
+                                                           if (task.isSuccessful()) {
+                                                               // Update Successfully
+                                                               String userphone = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
+                                                               current_phone.setText(userphone);
+                                                               Toast.makeText(getApplicationContext(),"Update Successful",Toast.LENGTH_LONG).show();
+                                                               dialog.dismiss();
+                                                           } else {
+                                                               // Failed
+                                                               Toast.makeText(getApplicationContext(),"Update failed",Toast.LENGTH_LONG).show();
+                                                               dialog.dismiss();
+                                                           }
+                                                       }
+                                                   }
+                            );
+                }
+
+            }
+        });
+
+        otpCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+
+
+    }
+
+
+    private void initiateotp(String phone)
+    {
+
+        PhoneAuthOptions options =
+                PhoneAuthOptions.newBuilder(mAuth)
+                        .setPhoneNumber(phone)       // Phone number to verify
+                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+                        .setActivity(this)                 // Activity (for callback binding)
+                        .setCallbacks(
+                                new PhoneAuthProvider.OnVerificationStateChangedCallbacks()
+                                {
+                                    @Override
+                                    public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken)
+                                    {
+                                        otpid=s;
+                                    }
+
+                                    @Override
+                                    public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential)
+                                    {
+//                                        signInWithPhoneAuthCredential(phoneAuthCredential);
+                                        FirebaseAuth.getInstance().getCurrentUser().updatePhoneNumber(phoneAuthCredential)
+                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                           @Override
+                                                                           public void onComplete(@NonNull Task<Void> task) {
+                                                                               if (task.isSuccessful()) {
+                                                                                   // Update Successfully
+                                                                                   Toast.makeText(getApplicationContext(),"Update Successful",Toast.LENGTH_LONG).show();
+                                                                                   dialog.dismiss();
+                                                                               } else {
+                                                                                   // Failed
+                                                                                   Toast.makeText(getApplicationContext(),"Update failed",Toast.LENGTH_LONG).show();
+                                                                                   dialog.dismiss();
+                                                                               }
+                                                                           }
+                                                                       }
+                                                );
+                                    }
+
+                                    @Override
+                                    public void onVerificationFailed(FirebaseException e) {
+                                        Toast.makeText(getApplicationContext(),e.getMessage(),Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                        )          // OnVerificationStateChangedCallbacks
+                        .build();
+        PhoneAuthProvider.verifyPhoneNumber(options);
+
+
+
+    }
+
+
+
 }
+
+
