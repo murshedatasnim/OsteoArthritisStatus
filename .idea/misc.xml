@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.103125" />
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/drawable/ic_launcher_background.xml" value="0.103125" />
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1984375" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_clinicalinfo.xml" value="0.24441340782122906" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_koos_scoring.xml" value="0.25" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_manageotp.xml" value="0.25" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_profile.xml" value="0.25" />
-        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_sociodemographyinfo.xml" value="0.25" />
+        <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_sociodemographyinfo.xml" value="0.16172506738544473" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/activity_splash_screen.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/dropdown_item.xml" value="0.18229166666666666" />
         <entry key="..\:/Users/mursh/Desktop/thesis/OsteoarthritisStatus/app/src/main/res/layout/otp_popup.xml" value="0.18229166666666666" />

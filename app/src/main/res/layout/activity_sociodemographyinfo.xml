@@ -87,7 +87,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin="@dimen/_15sdp"
-                        android:text="Does your work associate with _____?  (Select all that apply}"
+                        android:text="Does your work associate with _____?  (Select all that apply)"
                         android:textSize="@dimen/_15sdp"
                         android:textStyle="bold" />
 

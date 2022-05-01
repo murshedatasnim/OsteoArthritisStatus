@@ -414,7 +414,7 @@
                         android:layout_marginEnd="@dimen/_20sdp"
                         android:text="Diabetes Mellitus" />
                     <CheckBox
-                        android:id="@+id/q13cancer"
+                        android:id="@+id/c8cancer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_20sdp"

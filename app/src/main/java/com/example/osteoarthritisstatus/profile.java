@@ -28,6 +28,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.hbb20.CountryCodePicker;
 
 import java.text.SimpleDateFormat;
@@ -50,7 +53,11 @@ public class profile extends AppCompatActivity {
     private Button otpCancel;
 //    String phonenumber;
     private String otpid;
+    private EditText pid;
     private FirebaseAuth mAuth;
+
+    FirebaseDatabase rootNode;
+    DatabaseReference reference;
 
 
     @Override
@@ -68,10 +75,26 @@ public class profile extends AppCompatActivity {
         });
 
         Button button = findViewById(R.id.saveprofile);
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference( "profiles");
+        pid = findViewById(R.id.pid);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                String pid1 = pid.getText().toString();
+
+//                Toast.makeText(getApplicationContext(), pid1, Toast.LENGTH_SHORT).show();
+
+                profileHelper helper = new profileHelper(uid,pid1);
+
+                reference.child(uid).setValue(helper);
+
+                Toast.makeText(getApplicationContext(),"PID is saved", Toast.LENGTH_SHORT).show();
+
                 startActivity(new Intent(getApplicationContext(),dashboard.class));
                 finish();
             }
@@ -90,6 +113,20 @@ public class profile extends AppCompatActivity {
                 updatePhone();
             }
         });
+
+         reference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("pid").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+                    Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                    pid.setText(String.valueOf(task.getResult().getValue()));
+                }
+            }
+        });
+
 
 
         //----gender--------

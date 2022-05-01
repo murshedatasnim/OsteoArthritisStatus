@@ -2676,6 +2676,7 @@
                         android:layout_gravity="center"
                         android:layout_margin="20dp"
                         android:backgroundTint="@color/teal_700"
+                        android:enabled="false"
                         android:text="Upload Score"
                         android:textAllCaps="false"
                         android:textSize="@dimen/_15sdp" />

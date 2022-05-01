@@ -11,6 +11,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -115,6 +119,9 @@ public class koosScoring extends AppCompatActivity {
     private RadioButton radioButtonq3;
     private RadioButton radioButtonq4;
 
+    private FirebaseDatabase rootNode;
+    private DatabaseReference reference;
+
 
     private Button submit, upload;
     private int koos = 100;
@@ -134,23 +141,42 @@ public class koosScoring extends AppCompatActivity {
         });
 
         submit = findViewById(R.id.savekoos);
+        upload = findViewById(R.id.uploadkoos);
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 addListenerOnButton();
+                upload.setEnabled(true);
+
 //                startActivity(new Intent(getApplicationContext(),dashboard.class));
 //                finish();
             }
         });
 
-        upload = findViewById(R.id.uploadkoos);
+        rootNode = FirebaseDatabase.getInstance();
+        reference = rootNode.getReference( "koosScore");
+
+
 
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+                SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
                 Date date = new Date();
+
+                String UID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                KoosScoreHelper helper = new KoosScoreHelper(formatter.format(date), Integer.toString(koos), UID);
+
+                reference.child(UID).child(formatter.format(date)).setValue(helper);
+//                Log.d("occupation", "occ");
+//
+                Toast.makeText(getApplicationContext(),"Uploaded", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), formatter.format(date), Toast.LENGTH_SHORT).show();
+
+
+                startActivity(new Intent(getApplicationContext(),dashboard.class));
+                finish();
             }
         });
     }
