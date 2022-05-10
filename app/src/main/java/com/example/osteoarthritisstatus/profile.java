@@ -86,10 +86,11 @@ public class profile extends AppCompatActivity {
                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                 String pid1 = pid.getText().toString();
+                String phone = FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber();
 
 //                Toast.makeText(getApplicationContext(), pid1, Toast.LENGTH_SHORT).show();
 
-                profileHelper helper = new profileHelper(uid,pid1);
+                profileHelper helper = new profileHelper(uid,pid1,phone);
 
                 reference.child(uid).setValue(helper);
 

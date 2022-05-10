@@ -73,9 +73,9 @@
     <string-array name="s1array">
         <item>Health care worker – doctor, nurse, therapist, lab technologist</item>
         <item>Teacher/engineer/lawyer</item>
-        <item>Armed force personnel/Police/Security personnel</item>
-        <item>Manager/Office clerk</item>
-        <item>Janitor/Day labourer</item>
+        <item>Armed force personnel/police/security personnel</item>
+        <item>Manager/office clerk</item>
+        <item>Janitor/day labourer</item>
         <item>Retired</item>
         <item>Others</item>
     </string-array>

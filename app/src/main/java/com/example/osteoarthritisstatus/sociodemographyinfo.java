@@ -51,7 +51,7 @@ public class sociodemographyinfo extends AppCompatActivity {
         });
 
 
-        //-------s1------------//
+        //-------s1 = occupation------------//
         s1 = findViewById(R.id.s1);
 
         // Create an ArrayAdapter using the string array and a default spinner
@@ -67,7 +67,7 @@ public class sociodemographyinfo extends AppCompatActivity {
         s1.setAdapter(s1Adapter);
 
 
-        //-------s2------------//
+        //-------s2= work association------------//
         s2 = findViewById(R.id.s2);
 
         // Create an ArrayAdapter using the string array and a default spinner
@@ -83,7 +83,7 @@ public class sociodemographyinfo extends AppCompatActivity {
         s2.setAdapter(s2Adapter);
 
 
-        //-------s3------------//
+        //-------s3=house type------------//
         s3 = findViewById(R.id.s3);
 
         // Create an ArrayAdapter using the string array and a default spinner
@@ -99,11 +99,11 @@ public class sociodemographyinfo extends AppCompatActivity {
         s3.setAdapter(s3Adapter);
 
 
-        //-------s4------------//
+        //-------s4=floor------------//
 
         s4 = findViewById(R.id.s4);
 
-        //--------s5----------//
+        //--------s5=frequent use of staircases----------//
         s5 = findViewById(R.id.s5);
 
         // Create an ArrayAdapter using the string array and a default spinner
@@ -119,7 +119,7 @@ public class sociodemographyinfo extends AppCompatActivity {
         s5.setAdapter(s5Adapter);
 
 
-        //-------s6------------//
+        //-------s6=house toilet type------------//
         s6 = findViewById(R.id.s6);
 
         // Create an ArrayAdapter using the string array and a default spinner
@@ -135,7 +135,7 @@ public class sociodemographyinfo extends AppCompatActivity {
         s6.setAdapter(s6Adapter);
 
 
-        //-------s7------------//
+        //-------s7=prayer position------------//
         s7 = findViewById(R.id.s7);
 
         // Create an ArrayAdapter using the string array and a default spinner
@@ -167,7 +167,7 @@ public class sociodemographyinfo extends AppCompatActivity {
 
         s3.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long rowId) {
-                houseToiletType = (String)parent.getItemAtPosition(position);
+                houseType = (String)parent.getItemAtPosition(position);
 
             }
         });
