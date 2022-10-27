@@ -1,3 +1,2 @@
 # OsteoArthritisStatus
-Ugrad Thesis
-See the branch named 'first' 
+Ugrad Thesis. See the branch named 'first' 
